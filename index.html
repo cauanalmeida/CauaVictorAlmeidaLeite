@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Convite Junino 🎉</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('fundo.jpg'); /* Fundo com bandeirinhas */
+      background-size: cover;
+      background-attachment: fixed;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background-color: rgba(255, 0, 0, 0.8);
+      padding: 30px 20px;
+      border-bottom: 5px dashed yellow;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      margin: 0;
+      color: #fff;
+      text-shadow: 2px 2px #000;
+    }
+
+    p {
+      font-size: 1.3em;
+      margin: 10px;
+    }
+
+    .detalhes {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    .detalhes p strong {
+      font-size: 1.2em;
+      color: #ffcc00;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px;
+    }
+
+    .galeria img {
+      width: 100%;
+      max-width: 300px;
+      border: 5px solid #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #000;
+    }
+
+    .botoes {
+      margin: 30px;
+    }
+
+    .botoes a,
+    .botoes button {
+      display: inline-block;
+      margin: 10px;
+      padding: 20px 30px;
+      font-size: 1.5em;
+      color: white;
+      background-color: #008000;
+      text-decoration: none;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px #004d00;
+      transition: background 0.3s;
+      cursor: pointer;
+    }
+
+    .botoes a:hover,
+    .botoes button:hover {
+      background-color: #f39c12;
+    }
+
+    .lista-presentes-container {
+      display: none;
+      margin-top: 10px;
+      background-color: rgba(255,255,255,0.95);
+      color: #000;
+      border-radius: 10px;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      padding: 10px;
+    }
+
+    .lista-presentes-container div {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .lista-presentes-container div:last-child {
+      border-bottom: none;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      font-size: 1em;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      .botoes a,
+      .botoes button {
+        font-size: 1.2em;
+        padding: 15px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🎊 Arraiá do Cauâ 🎂</h1>
+    <p>Você está convidado pro aniversário de <strong>Cauâ Victor Almeida Leite</strong>!</p>
+  </header>
+
+  <section class="detalhes">
+    <p>🗓 <strong>Data:</strong> 18 de Junho de 2025</p>
+    <p>🕒 <strong>Horário:</strong> 19h30</p>
+    <p>📍 <strong>Local:</strong> <a href="#" style="color: #ffcc00;" target="_blank">Lanchonete Sanduba – em frente o Parque do Ingá – Manacapuru</a></p>
+  </section>
+
+  <section class="galeria">
+    <img src="a.JPG" alt="Foto 1">
+    <img src="b.jpg" alt="Foto 2">
+    <img src="c.JPG" alt="Foto 3">
+    <img src="d.jpg" alt="Foto 4">
+  </section>
+
+  <section class="botoes">
+    <a href="https://wa.me/5592991850895?text=Confirmo+presença+no+seu+aniversário+Cauâ+Almeida" target="_blank">🎉 Confirmar Presença</a>
+    <button onclick="toggleLista()">🎁 Ver Lista de Presentes</button>
+
+    <div class="lista-presentes-container" id="listaPresentes">
+      <div>👖 Bermuda nº 40</div>
+      <div>👞 Sapato nº 40</div>
+      <div>👕 Camisa: G</div>
+    </div>
+  </section>
+
+  <footer>
+    💖 Sua presença vai deixar a festança ainda mais animada! Vem pro nosso Arraiá!
+  </footer>
+
+  <script>
+    function toggleLista() {
+      const lista = document.getElementById("listaPresentes");
+      lista.style.display = lista.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
